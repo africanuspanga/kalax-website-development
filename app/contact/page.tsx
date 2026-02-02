@@ -1,0 +1,323 @@
+"use client"
+
+import React from "react"
+
+import { motion } from "framer-motion"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
+import { WhatsAppButton } from "@/components/whatsapp-button"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react"
+import Image from "next/image"
+import { useState } from "react"
+
+export default function ContactPage() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    message: "",
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission
+    console.log(formState)
+  }
+
+  return (
+    <main className="min-h-screen bg-background">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/billboard-night.jpg"
+            alt="Contact KALAX"
+            fill
+            className="object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
+        </div>
+
+        <div className="container relative z-10 mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              Get In Touch
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+              Let{"'"}s Create Something{" "}
+              <span className="text-primary">Extraordinary</span>
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Ready to amplify your brand? We{"'"}re here to transform your vision into impactful advertising campaigns.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Content */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-foreground mb-2">Send Us a Message</h2>
+              <p className="text-muted-foreground mb-8">
+                Fill out the form below and our team will get back to you within 24 hours.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">Full Name *</Label>
+                    <Input
+                      id="name"
+                      placeholder="John Doe"
+                      value={formState.name}
+                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                      required
+                      className="bg-card border-border"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="john@company.com"
+                      value={formState.email}
+                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                      required
+                      className="bg-card border-border"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      placeholder="+255 XXX XXX XXX"
+                      value={formState.phone}
+                      onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+                      className="bg-card border-border"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="company">Company Name</Label>
+                    <Input
+                      id="company"
+                      placeholder="Your Company"
+                      value={formState.company}
+                      onChange={(e) => setFormState({ ...formState, company: e.target.value })}
+                      className="bg-card border-border"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="service">Service Interested In</Label>
+                  <select
+                    id="service"
+                    value={formState.service}
+                    onChange={(e) => setFormState({ ...formState, service: e.target.value })}
+                    className="w-full h-10 px-3 rounded-md bg-card border border-border text-foreground"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="outdoor">Outdoor Advertising</option>
+                    <option value="branding">Corporate Branding</option>
+                    <option value="printing">Printing Services</option>
+                    <option value="marketing">Marketing Activation</option>
+                    <option value="creative">Creative Design</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message">Your Message *</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Tell us about your project..."
+                    value={formState.message}
+                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                    required
+                    rows={6}
+                    className="bg-card border-border resize-none"
+                  />
+                </div>
+
+                <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Send className="w-5 h-5 mr-2" />
+                  Send Message
+                </Button>
+              </form>
+            </motion.div>
+
+            {/* Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-3xl font-bold text-foreground mb-2">Contact Information</h2>
+                <p className="text-muted-foreground mb-8">
+                  Visit our office or reach out through any of the channels below.
+                </p>
+              </div>
+
+              {/* Info Cards */}
+              <div className="space-y-4">
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
+                      <p className="text-muted-foreground">
+                        Plot 445, Golf Street, Opposite Lugalo Golf Course<br />
+                        Kawe, Dar es Salaam, Tanzania
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Phone Number</h3>
+                      <a href="tel:+255713328271" className="text-muted-foreground hover:text-primary transition-colors">
+                        +255 713 328 271
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Email Address</h3>
+                      <a href="mailto:info@kalax.co.tz" className="text-muted-foreground hover:text-primary transition-colors">
+                        info@kalax.co.tz
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-colors">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
+                      <p className="text-muted-foreground">
+                        Monday - Friday: 8:00 AM - 6:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* WhatsApp CTA */}
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-[#25D366]/20 to-[#25D366]/5 border border-[#25D366]/30">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center">
+                    <MessageCircle className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-1">Chat on WhatsApp</h3>
+                    <p className="text-muted-foreground text-sm">Get instant response from our team</p>
+                  </div>
+                  <Button asChild className="bg-[#25D366] hover:bg-[#25D366]/90 text-white">
+                    <a href="https://wa.me/255713328271" target="_blank" rel="noopener noreferrer">
+                      Chat Now
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
+              {/* Map */}
+              <div className="relative h-64 rounded-2xl overflow-hidden border border-border">
+                <Image
+                  src="/images/billboard-golden.jpg"
+                  alt="KALAX Location Map"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-foreground font-medium">Nationwide Coverage Across Tanzania</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Bar */}
+      <section className="py-12 bg-primary">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <motion.a
+              href="tel:+255713328271"
+              className="flex items-center gap-3 text-primary-foreground hover:opacity-80 transition-opacity"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Phone className="w-6 h-6" />
+              <span className="font-medium">+255 713 328 271</span>
+            </motion.a>
+            <motion.a
+              href="mailto:info@kalax.co.tz"
+              className="flex items-center gap-3 text-primary-foreground hover:opacity-80 transition-opacity"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Mail className="w-6 h-6" />
+              <span className="font-medium">info@kalax.co.tz</span>
+            </motion.a>
+            <motion.a
+              href="https://wa.me/255753630841"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-primary-foreground hover:opacity-80 transition-opacity"
+              whileHover={{ scale: 1.05 }}
+            >
+              <MessageCircle className="w-6 h-6" />
+              <span className="font-medium">WhatsApp Us</span>
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppButton />
+    </main>
+  )
+}
