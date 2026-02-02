@@ -20,7 +20,7 @@ export function CTASection() {
       {/* Parallax Background */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <Image
-          src="/images/billboard-golden.jpg"
+          src="/images/billboard-homebase-appliances.jpg"
           alt="KALAX presence across Tanzania"
           fill
           className="object-cover"

@@ -9,7 +9,7 @@ const digitalLocations = [
     id: 1,
     name: "Mlimani City Roundabout",
     road: "Sam Nujoma Road",
-    video: "/videos/digital-screen-mlimani-city.mov",
+    video: "/videos/digital-screen-mlimani-city.mp4",
     size: "768px x 1104px",
     status: "Available",
     visibility: "Traffic along Sam Nujoma",
@@ -24,7 +24,7 @@ const digitalLocations = [
     id: 2,
     name: "Salender Bridge",
     road: "Ali Hassan Mwinyi Road",
-    video: "/videos/digital-screen-salender-bridge.mov",
+    video: "/videos/digital-screen-salender-bridge.mp4",
     size: "1200px x 1440px",
     status: "Available",
     visibility: "Traffic from Town",
@@ -42,7 +42,7 @@ const digitalLocations = [
     id: 3,
     name: "Mwai Kibaki Road",
     road: "Near Heineken House",
-    video: "/videos/digital-screen-gsm-mall.mov",
+    video: "/videos/digital-screen-gsm-mall.mp4",
     size: "1200px x 1440px",
     status: "Available",
     visibility: "Traffic to Mbezi Beach",
@@ -167,13 +167,15 @@ export function DigitalScreensSection() {
               >
                 <video
                   ref={(el) => { videoRefs.current[location.id] = el }}
+                  autoPlay
                   muted
                   loop
                   playsInline
                   preload="auto"
                   className="absolute inset-0 w-full h-full object-cover"
-                  src={location.video}
-                />
+                >
+                  <source src={location.video} type="video/mp4" />
+                </video>
                 
                 {/* Play indicator overlay */}
                 <div className={`absolute inset-0 bg-kalax-black/50 flex items-center justify-center transition-opacity duration-300 ${

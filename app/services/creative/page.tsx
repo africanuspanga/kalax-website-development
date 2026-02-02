@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowRight, Palette, Film, Code, BookOpen } from "lucide-react"
+import { ArrowRight, Palette, Film } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -11,28 +11,28 @@ import { Button } from "@/components/ui/button"
 
 const services = [
   {
-    title: "Brand Design",
-    description: "Comprehensive brand identity design from logos to complete visual systems.",
+    title: "Billboard Design",
+    description: "Eye-catching billboard artwork designed for maximum impact and visibility from a distance.",
     icon: Palette,
-    features: ["Logo Design", "Visual Identity", "Brand Guidelines", "Stationery Design"],
+    features: ["Static Billboard Design", "Large Format Graphics", "Brand Adaptation", "Print-Ready Files"],
   },
   {
-    title: "Animation & Video",
-    description: "Compelling motion graphics and video content that tells your brand story.",
+    title: "Digital Screen Content",
+    description: "Dynamic video content and animations optimized for LED digital screens.",
     icon: Film,
-    features: ["Motion Graphics", "Documentaries", "TV Commercials", "Social Media Content"],
+    features: ["Motion Graphics", "Video Ads", "Animated Campaigns", "Screen-Optimized Content"],
   },
   {
-    title: "Digital Development",
-    description: "Custom websites and mobile applications built for performance and engagement.",
-    icon: Code,
-    features: ["Web Design", "App Development", "UI/UX Design", "E-commerce"],
+    title: "Campaign Artwork",
+    description: "Complete campaign visual design from concept to final production-ready artwork.",
+    icon: Palette,
+    features: ["Concept Development", "Visual Design", "Multi-Format Adaptation", "Brand Consistency"],
   },
   {
-    title: "Brand Manuals",
-    description: "Detailed brand guidelines that ensure consistency across all touchpoints.",
-    icon: BookOpen,
-    features: ["Style Guides", "Usage Guidelines", "Asset Libraries", "Training Materials"],
+    title: "Video Production",
+    description: "Professional video production for digital screens and promotional content.",
+    icon: Film,
+    features: ["Commercial Production", "Product Videos", "Brand Stories", "Social Media Content"],
   },
 ]
 
@@ -45,7 +45,7 @@ export default function CreativeWorkPage() {
       <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billboard-golden.jpg"
+            src="/images/creative services.jpg"
             alt="Creative Work"
             fill
             className="object-cover"
@@ -61,18 +61,18 @@ export default function CreativeWorkPage() {
             className="max-w-2xl"
           >
             <span className="inline-block px-4 py-2 bg-kalax-red/20 border border-kalax-red/40 rounded-full text-kalax-red text-sm font-medium tracking-wider uppercase mb-6">
-              Creative Work
+              Creative Services
             </span>
             <h1 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-kalax-white mb-6"
               style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
             >
-              CREATIVITY THAT{" "}
-              <span className="text-kalax-red">CONVERTS</span>
+              BILLBOARD & SCREEN{" "}
+              <span className="text-kalax-red">DESIGN</span>
             </h1>
             <p className="text-xl text-kalax-gray leading-relaxed mb-8">
-              From stunning brand designs to immersive digital experiences, our creative team 
-              brings your vision to life with work that stands out and delivers results.
+              Professional billboard artwork and digital screen content that captures attention 
+              and delivers your message with maximum impact.
             </p>
             <Button
               asChild
@@ -162,12 +162,12 @@ export default function CreativeWorkPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { image: "/images/billboard-night.jpg", title: "Brand Campaign", category: "Design" },
-              { image: "/images/billboard-day.jpg", title: "Visual Identity", category: "Branding" },
-              { image: "/images/bus-stop.jpg", title: "Motion Graphics", category: "Animation" },
-              { image: "/images/billboard-urban.jpg", title: "Web Design", category: "Digital" },
-              { image: "/images/billboard-golden.jpg", title: "App Development", category: "Development" },
-              { image: "/images/billboard-night.jpg", title: "Brand Manual", category: "Guidelines" },
+              { image: "/images/billboard-singleton-whisky.jpg", title: "Singleton Whisky", category: "Billboard Design" },
+              { image: "/images/billboard-pepsi-chuba.jpg", title: "Pepsi Chupa ni Mwamba", category: "Billboard Design" },
+              { image: "/images/billboard-emirates-dubai.jpg", title: "Emirates Dubai", category: "Billboard Design" },
+              { image: "/images/billboard-serengeti.jpg", title: "Serengeti Lemon", category: "Billboard Design" },
+              { image: "/images/billboard-tcb-bank.jpg", title: "TCB Bank", category: "Billboard Design" },
+              { image: "/images/billboard-guinness.jpg", title: "Guinness Campaign", category: "Billboard Design" },
             ].map((item, index) => (
               <motion.div
                 key={item.title}

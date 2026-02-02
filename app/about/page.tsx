@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { ArrowRight, Target, Eye, Heart, Linkedin, Twitter } from "lucide-react"
+import { ArrowRight, Target, Eye, Heart } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -16,13 +16,6 @@ const timeline = [
   { year: "2021", title: "Digital Screens Launch", description: "Introduced digital billboard technology at premium locations across Tanzania." },
   { year: "2023", title: "Market Leader", description: "Became Tanzania's most trusted outdoor advertising company with 200+ billboard locations." },
   { year: "2026", title: "Vision Achieved", description: "The largest and most trusted outdoor advertising firm in Tanzania with static and digital coverage nationwide." },
-]
-
-const team = [
-  { name: "Edwin Kalabashanga", role: "Founder & CEO", image: "EK" },
-  { name: "Grace Mwambene", role: "Head of Creative", image: "GM" },
-  { name: "David Kimaro", role: "Billboard Operations Director", image: "DK" },
-  { name: "Sarah Msangi", role: "Client Partnerships Manager", image: "SM" },
 ]
 
 const values = [
@@ -117,8 +110,8 @@ export default function AboutPage() {
               className="relative aspect-square"
             >
               <Image
-                src="/images/billboard-golden.jpg"
-                alt="KALAX presence across Tanzania"
+                src="/images/billboard-donjulio-spirits.jpg"
+                alt="KALAX billboard campaign"
                 fill
                 className="object-contain"
               />
@@ -221,7 +214,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Why Partner With Us Section */}
       <section className="py-24 bg-kalax-black">
         <div className="container mx-auto px-6">
           <motion.div
@@ -234,43 +227,85 @@ export default function AboutPage() {
               className="text-4xl md:text-5xl font-bold text-kalax-white mb-4"
               style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
             >
-              MEET THE TEAM
+              WHY PARTNER WITH <span className="text-kalax-red">KALAX</span>
             </h2>
             <p className="text-kalax-gray max-w-2xl mx-auto text-lg">
-              The creative minds behind KALAX&apos;s success
+              What sets us apart in Tanzania&apos;s advertising landscape
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-kalax-charcoal rounded-2xl p-6 text-center hover:bg-kalax-charcoal/80 transition-all"
-              >
-                {/* Avatar */}
-                <div className="w-24 h-24 rounded-full bg-kalax-red/20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-kalax-red">
-                  {member.image}
-                </div>
-                <h3 className="text-xl font-bold text-kalax-white group-hover:text-kalax-red transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-kalax-gray mt-1">{member.role}</p>
-                
-                {/* Social Links */}
-                <div className="flex justify-center gap-3 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <a href="#" className="w-8 h-8 rounded-full bg-kalax-black flex items-center justify-center text-kalax-gray hover:text-kalax-red transition-colors">
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-kalax-black flex items-center justify-center text-kalax-gray hover:text-kalax-red transition-colors">
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>100+</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Billboard Locations</h3>
+              <p className="text-kalax-gray">Strategic placements across Tanzania&apos;s busiest roads and cities</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>10+</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Years Experience</h3>
+              <p className="text-kalax-gray">A decade of expertise in outdoor advertising and brand visibility</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>50+</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Brand Partners</h3>
+              <p className="text-kalax-gray">Trusted by leading local and international brands</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>24/7</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Support & Monitoring</h3>
+              <p className="text-kalax-gray">Round-the-clock campaign monitoring and client support</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>3</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Digital Screens</h3>
+              <p className="text-kalax-gray">Premium digital billboard locations with dynamic content capabilities</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="bg-kalax-charcoal rounded-2xl p-8"
+            >
+              <div className="text-5xl font-bold text-kalax-red mb-4" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>100%</div>
+              <h3 className="text-xl font-bold text-kalax-white mb-2">Client Satisfaction</h3>
+              <p className="text-kalax-gray">Committed to delivering results that exceed expectations</p>
+            </motion.div>
           </div>
         </div>
       </section>

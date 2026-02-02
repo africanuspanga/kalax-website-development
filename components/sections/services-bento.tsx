@@ -11,7 +11,7 @@ const services = [
     description: "Static billboards & digital screens strategically placed across Tanzania. Dominate high-traffic locations with our premium billboard network.",
     icon: Megaphone,
     href: "/services/outdoor-advertising",
-    image: "/images/billboard-night.jpg",
+    image: "/images/outdoor-advertising.JPG",
     size: "large",
   },
   {
@@ -19,7 +19,7 @@ const services = [
     description: "Strategic marketing campaigns, brand activations, events, and media buying",
     icon: Users,
     href: "/services/marketing",
-    image: "/images/bus-stop.jpg",
+    image: "/images/marketing services.jpg",
     size: "medium",
   },
   {
@@ -27,7 +27,7 @@ const services = [
     description: "Brand design, animation, app development, and brand manuals",
     icon: Palette,
     href: "/services/creative",
-    image: "/images/billboard-golden.jpg",
+    image: "/images/creative services.jpg",
     size: "medium",
   },
   {
@@ -35,7 +35,7 @@ const services = [
     description: "Digital, offset, and large format printing for all your business needs",
     icon: Printer,
     href: "/services/printing",
-    image: "/images/billboard-urban.jpg",
+    image: "/images/printing services.jpg",
     size: "large",
   },
 ]

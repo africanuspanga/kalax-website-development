@@ -56,7 +56,7 @@ export default function MarketingPage() {
       <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/bus-stop.jpg"
+            src="/images/marketing services.jpg"
             alt="Marketing & Activations"
             fill
             className="object-cover"
@@ -133,13 +133,13 @@ export default function MarketingPage() {
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-square"
+              className="relative aspect-square rounded-2xl overflow-hidden"
             >
               <Image
-                src="/images/billboard-golden.jpg"
-                alt="Marketing Network"
+                src="/images/billboard-davido-event.jpg"
+                alt="Event Marketing"
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </motion.div>
           </div>

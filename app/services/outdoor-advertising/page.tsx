@@ -11,24 +11,24 @@ import { Button } from "@/components/ui/button"
 
 const products = [
   {
-    title: "Super Billboards",
-    description: "Large format billboards in high-traffic locations for maximum brand visibility.",
-    image: "/images/billboard-day.jpg",
+    title: "Static Billboards",
+    description: "Large format static billboards in high-traffic locations across Tanzania for maximum brand visibility.",
+    image: "/images/billboard-emirates-dubai.jpg",
   },
   {
-    title: "Lamp Poles",
-    description: "Strategic lamp pole advertising along major roads and highways.",
-    image: "/images/billboard-urban.jpg",
+    title: "Digital Screens",
+    description: "Premium LED digital screens with dynamic content capabilities at strategic locations.",
+    image: "/images/billboard-night.jpg",
   },
   {
-    title: "Transit Advertising",
-    description: "Bus wraps, taxi branding, and vehicle advertising solutions.",
-    image: "/images/bus-stop.jpg",
+    title: "Highway Billboards",
+    description: "High-impact billboards along major highways reaching travelers and commuters.",
+    image: "/images/billboard-serengeti.jpg",
   },
   {
-    title: "Street Furniture",
-    description: "Bus shelters, benches, and kiosks in prime urban locations.",
-    image: "/images/bus-stop.jpg",
+    title: "Urban Billboards",
+    description: "City center billboards in prime commercial areas with high foot traffic.",
+    image: "/images/billboard-guinness.jpg",
   },
 ]
 
@@ -61,7 +61,7 @@ export default function OutdoorAdvertisingPage() {
       <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billboard-night.jpg"
+            src="/images/billboard-emirates-travel.jpg"
             alt="Billboard at night"
             fill
             className="object-cover"
@@ -136,12 +136,24 @@ export default function OutdoorAdvertisingPage() {
                 transition={{ delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-2xl aspect-[16/10]"
               >
-                <Image
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {product.title === "Digital Screens" ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  >
+                    <source src="/videos/digital-screen-salender-bridge.mp4" type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-kalax-black via-kalax-black/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <h3 className="text-2xl font-bold text-kalax-white mb-2 group-hover:text-kalax-red transition-colors">
@@ -240,7 +252,7 @@ export default function OutdoorAdvertisingPage() {
               className="relative aspect-square"
             >
               <Image
-                src="/images/billboard-golden.jpg"
+                src="/images/tanzania-network.png"
                 alt="KALAX presence across Tanzania"
                 fill
                 className="object-contain"

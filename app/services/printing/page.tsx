@@ -61,7 +61,7 @@ export default function PrintingServicesPage() {
       <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billboard-urban.jpg"
+            src="/images/printing services.jpg"
             alt="Printing Services"
             fill
             className="object-cover"
@@ -206,7 +206,7 @@ export default function PrintingServicesPage() {
               <div className="space-y-4">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/bus-stop.jpg"
+                    src="/images/billboard-singleton-whisky.jpg"
                     alt="Print samples"
                     fill
                     className="object-cover"
@@ -214,7 +214,7 @@ export default function PrintingServicesPage() {
                 </div>
                 <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/billboard-day.jpg"
+                    src="/images/billboard-pepsi-chuba.jpg"
                     alt="Print samples"
                     fill
                     className="object-cover"
@@ -224,7 +224,7 @@ export default function PrintingServicesPage() {
               <div className="space-y-4 pt-8">
                 <div className="relative aspect-square rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/billboard-urban.jpg"
+                    src="/images/billboard-emirates-dubai.jpg"
                     alt="Print samples"
                     fill
                     className="object-cover"
@@ -232,7 +232,7 @@ export default function PrintingServicesPage() {
                 </div>
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/billboard-night.jpg"
+                    src="/images/billboard-guinness.jpg"
                     alt="Print samples"
                     fill
                     className="object-cover"

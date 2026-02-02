@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Whitedent Toothpaste - Ultra Fresh",
+    title: "Whitedent Toothpaste Campaign",
     category: "Static Billboards",
     client: "Whitedent",
     image: "/images/billboard-whitedent-1.jpg",
@@ -31,14 +31,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "Whitedent Couple Campaign",
-    category: "Static Billboards",
-    client: "Whitedent",
-    image: "/images/billboard-whitedent-2.jpg",
-    description: "Lifestyle-focused billboard showcasing product benefits through relatable imagery",
-  },
-  {
-    id: 4,
     title: "Chery Auto 10-Year Warranty",
     category: "Static Billboards",
     client: "Chery Tanzania",
@@ -46,15 +38,7 @@ const projects = [
     description: "Premium automotive billboard highlighting industry-leading warranty offer",
   },
   {
-    id: 5,
-    title: "Halotel 10 Years Anniversary",
-    category: "Static Billboards",
-    client: "Halotel Tanzania",
-    image: "/images/billboard-halotel-anniversary.jpg",
-    description: "Celebratory campaign marking a decade of telecommunications excellence in Tanzania",
-  },
-  {
-    id: 6,
+    id: 4,
     title: "Singleton Whisky - Spirit of the Season",
     category: "Static Billboards",
     client: "Diageo",
@@ -62,7 +46,7 @@ const projects = [
     description: "Premium spirits billboard campaign with sophisticated seasonal messaging",
   },
   {
-    id: 7,
+    id: 5,
     title: "Serengeti Lemon - Squeeze Every Moment",
     category: "Static Billboards",
     client: "Serengeti Breweries",
@@ -70,7 +54,7 @@ const projects = [
     description: "Refreshing beverage campaign targeting young professionals with lifestyle messaging",
   },
   {
-    id: 8,
+    id: 6,
     title: "Tanzania Commercial Bank - Popote Visa",
     category: "Static Billboards",
     client: "TCB Bank",
@@ -78,7 +62,7 @@ const projects = [
     description: "Financial services campaign promoting digital payment solutions across Tanzania",
   },
   {
-    id: 9,
+    id: 7,
     title: "Emirates - Share Magical Moments",
     category: "Static Billboards",
     client: "Emirates Airlines",
@@ -86,7 +70,7 @@ const projects = [
     description: "Premium travel billboard promoting Dubai tourism and flight experiences",
   },
   {
-    id: 10,
+    id: 8,
     title: "SkyHome Ocean View Apartments",
     category: "Static Billboards",
     client: "SkyHome Real Estate",
@@ -94,7 +78,7 @@ const projects = [
     description: "Luxury real estate billboard campaign for premium oceanfront properties",
   },
   {
-    id: 11,
+    id: 9,
     title: "Dongfang Steel - Build Your Future",
     category: "Static Billboards",
     client: "Dongfang Steel",
@@ -102,15 +86,7 @@ const projects = [
     description: "Industrial construction materials campaign targeting builders and contractors",
   },
   {
-    id: 12,
-    title: "Serengeti Lemon - Traffic Campaign",
-    category: "Static Billboards",
-    client: "Serengeti Breweries",
-    image: "/images/billboard-serengeti-2.jpg",
-    description: "High-traffic location billboard maximizing brand exposure during peak hours",
-  },
-  {
-    id: 13,
+    id: 10,
     title: "Vodacom Family Connection",
     category: "Static Billboards",
     client: "Vodacom Tanzania",
@@ -118,12 +94,36 @@ const projects = [
     description: "Telecommunications campaign emphasizing family connectivity and network reliability",
   },
   {
-    id: 14,
+    id: 11,
     title: "BangBet Jackpot Campaign",
     category: "Static Billboards",
     client: "BangBet",
     image: "/images/billboard-bangbet.jpg",
     description: "Gaming and entertainment billboard with bold visuals and prize messaging",
+  },
+  {
+    id: 12,
+    title: "ABSA Bank - Salender Bridge Screen",
+    category: "Digital Screens",
+    client: "ABSA Bank",
+    video: "/videos/digital-screen-salender-bridge.mp4",
+    description: "Dynamic digital campaign on Salender Bridge screen reaching traffic from Town",
+  },
+  {
+    id: 13,
+    title: "Sportpesa Aviator - GSM Mall Screen",
+    category: "Digital Screens",
+    client: "Sportpesa",
+    video: "/videos/digital-screen-gsm-mall.mp4",
+    description: "High-impact gaming campaign on Mwai Kibaki Road digital screen near Heineken House",
+  },
+  {
+    id: 14,
+    title: "Pepsi Chupa ni Mwamba - Mlimani City Screen",
+    category: "Digital Screens",
+    client: "PepsiCo",
+    video: "/videos/digital-screen-mlimani-city.mp4",
+    description: "Refreshing beverage campaign on Mlimani City Roundabout digital screen",
   },
 ]
 
@@ -136,7 +136,7 @@ export default function PortfolioPage() {
       : projects.filter((p) => p.category === activeCategory)
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-kalax-black">
       <Navigation />
 
       {/* Hero Section */}
@@ -148,7 +148,7 @@ export default function PortfolioPage() {
             fill
             className="object-cover opacity-20"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-kalax-black via-kalax-black/95 to-kalax-black" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4">
@@ -158,13 +158,13 @@ export default function PortfolioPage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-kalax-red/10 text-kalax-red text-sm font-medium mb-6">
               Our Work
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Featured <span className="text-primary">Projects</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-kalax-white mb-6" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>
+              FEATURED <span className="text-kalax-red">PROJECTS</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-kalax-gray">
               Explore our portfolio of successful campaigns that have helped brands stand out across Tanzania.
             </p>
           </motion.div>
@@ -172,7 +172,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Tabs */}
-      <section className="py-8 border-b border-border sticky top-20 bg-background/95 backdrop-blur-md z-40">
+      <section className="py-8 border-b border-kalax-charcoal sticky top-20 bg-kalax-black/95 backdrop-blur-md z-40">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
@@ -182,8 +182,8 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(category)}
                 className={
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "border-border hover:border-primary hover:text-primary"
+                    ? "bg-kalax-red text-kalax-white"
+                    : "border-kalax-charcoal text-kalax-gray hover:border-kalax-red hover:text-kalax-red bg-transparent"
                 }
               >
                 {category}
@@ -208,16 +208,28 @@ export default function PortfolioPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-all duration-300"
+                className="group relative rounded-2xl overflow-hidden bg-kalax-charcoal border border-kalax-charcoal hover:border-kalax-red/50 transition-all duration-300"
               >
                 <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {'video' in project ? (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    >
+                      <source src={(project as { video: string }).video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={(project as { image: string }).image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-kalax-black via-kalax-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button size="icon" variant="secondary" className="rounded-full">
                       <Eye className="w-5 h-5" />
@@ -226,15 +238,15 @@ export default function PortfolioPage() {
                 </div>
 
                 <div className="p-6">
-                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-3">
+                  <span className="inline-block px-3 py-1 rounded-full bg-kalax-red/10 text-kalax-red text-xs font-medium mb-3">
                     {project.category}
                   </span>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-bold text-kalax-white mb-2 group-hover:text-kalax-red transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-3">{project.description}</p>
-                  <p className="text-xs text-muted-foreground">
-                    Client: <span className="text-foreground">{project.client}</span>
+                  <p className="text-kalax-gray text-sm mb-3">{project.description}</p>
+                  <p className="text-xs text-kalax-gray">
+                    Client: <span className="text-kalax-white">{project.client}</span>
                   </p>
                 </div>
               </motion.div>
@@ -244,7 +256,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-card">
+      <section className="py-20 bg-kalax-charcoal">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -252,13 +264,13 @@ export default function PortfolioPage() {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Be Our Next Success Story?
+            <h2 className="text-3xl md:text-4xl font-bold text-kalax-white mb-6" style={{ fontFamily: 'var(--font-bebas), sans-serif' }}>
+              READY TO BE OUR NEXT SUCCESS STORY?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-kalax-gray mb-8">
               Let{"'"}s create a campaign that puts your brand in the spotlight.
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Button asChild size="lg" className="bg-kalax-red hover:bg-kalax-red/90 text-kalax-white">
               <Link href="/contact">
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />

@@ -8,19 +8,9 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Halotel 5G Network Launch",
+    title: "Emirates Dubai Tourism",
     category: "Static Billboard",
-    image: "/images/billboard-halotel-5g.jpg",
-  },
-  {
-    title: "Whitedent Ultra Fresh",
-    category: "Static Billboard",
-    image: "/images/billboard-whitedent-1.jpg",
-  },
-  {
-    title: "Chery Auto Warranty",
-    category: "Static Billboard",
-    image: "/images/billboard-chery-auto.jpg",
+    image: "/images/billboard-emirates-dubai.jpg",
   },
   {
     title: "Serengeti Lemon Campaign",
@@ -28,14 +18,24 @@ const projects = [
     image: "/images/billboard-serengeti.jpg",
   },
   {
-    title: "Emirates Dubai Tourism",
+    title: "Guinness Bold Campaign",
     category: "Static Billboard",
-    image: "/images/billboard-emirates-travel.jpg",
+    image: "/images/billboard-guinness.jpg",
   },
   {
-    title: "Vodacom Family Connect",
+    title: "Singleton Whisky - Spirit of the Season",
     category: "Static Billboard",
-    image: "/images/billboard-vodacom.jpg",
+    image: "/images/billboard-singleton-whisky.jpg",
+  },
+  {
+    title: "Tanzania Commercial Bank - Popote Visa",
+    category: "Static Billboard",
+    image: "/images/billboard-tcb-bank.jpg",
+  },
+  {
+    title: "Pepsi Chupa ni Mwamba Campaign",
+    category: "Static Billboard",
+    image: "/images/billboard-pepsi-chuba.jpg",
   },
 ]
 
