@@ -140,8 +140,14 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-kalax-red flex-shrink-0 mt-1" />
                 <span className="text-kalax-gray">
-                  Plot 445, Golf Street, Opposite Lugalo Golf Course, Kawe, Dar es Salaam
+                  P.O BOX 31942, PLOT NO 119, WHITE SAND ROAD JANGWANI STREET, MBEZI BEACH DAR ES SALAAM, TANZANIA
                 </span>
+              </li>
+              <li>
+                <a href="tel:+255769811511" className="flex items-center gap-3 text-kalax-gray hover:text-kalax-red transition-colors">
+                  <Phone className="w-5 h-5 text-kalax-red" />
+                  +255 769 811 511
+                </a>
               </li>
               <li>
                 <a href="tel:+255713328271" className="flex items-center gap-3 text-kalax-gray hover:text-kalax-red transition-colors">

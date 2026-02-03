@@ -19,11 +19,11 @@ const services = [
   },
   {
     title: "Marketing",
-    description: "Strategic marketing campaigns that connect your brand with your target audience. From brand activations to media buying, we deliver results that matter.",
+    description: "Strategic marketing campaigns that connect your brand with your target audience. From brand activations to campaign strategy, we deliver results that matter.",
     icon: Users,
     href: "/services/marketing",
     image: "/images/bus-stop.jpg",
-    features: ["Brand Activations", "Event Marketing", "Field Marketing", "Media Buying"],
+    features: ["Brand Activations", "Event Marketing", "Field Marketing", "Campaign Strategy"],
   },
   {
     title: "Creative",

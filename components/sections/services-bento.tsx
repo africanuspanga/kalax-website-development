@@ -16,7 +16,7 @@ const services = [
   },
   {
     title: "Marketing",
-    description: "Strategic marketing campaigns, brand activations, events, and media buying",
+    description: "Strategic marketing campaigns, brand activations, and events",
     icon: Users,
     href: "/services/marketing",
     image: "/images/marketing services.jpg",

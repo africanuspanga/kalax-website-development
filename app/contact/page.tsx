@@ -36,7 +36,7 @@ export default function ContactPage() {
       `*Message:* ${formState.message}`
     
     // Open WhatsApp with prefilled message
-    window.open(`https://wa.me/255713328271?text=${message}`, '_blank')
+    window.open(`https://wa.me/255769811511?text=${message}`, '_blank')
   }
 
   return (
@@ -203,8 +203,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-kalax-white mb-1">Office Address</h3>
                       <p className="text-kalax-gray">
-                        Plot 445, Golf Street, Opposite Lugalo Golf Course<br />
-                        Kawe, Dar es Salaam, Tanzania
+                        P.O BOX 31942, PLOT NO 119, WHITE SAND ROAD JANGWANI STREET, MBEZI BEACH DAR ES SALAAM, TANZANIA
                       </p>
                     </div>
                   </div>
@@ -217,6 +216,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-kalax-white mb-1">Phone Number</h3>
+                      <a href="tel:+255769811511" className="text-kalax-gray hover:text-kalax-red transition-colors">
+                        +255 769 811 511
+                      </a>
+                      <br />
                       <a href="tel:+255713328271" className="text-kalax-gray hover:text-kalax-red transition-colors">
                         +255 713 328 271
                       </a>
@@ -264,7 +267,7 @@ export default function ContactPage() {
                     <p className="text-kalax-gray text-sm">Get instant response from our team</p>
                   </div>
                   <Button asChild className="bg-[#25D366] hover:bg-[#25D366]/90 text-white">
-                    <a href="https://wa.me/255713328271" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/255769811511?text=I%20am%20coming%20from%20KALAX%20website%20requisition%20some%20of%20your%20services" target="_blank" rel="noopener noreferrer">
                       Chat Now
                     </a>
                   </Button>
@@ -274,14 +277,14 @@ export default function ContactPage() {
               {/* Map */}
               <div className="relative h-64 rounded-2xl overflow-hidden border border-kalax-charcoal">
                 <Image
-                  src="/images/billboard-golden.jpg"
-                  alt="KALAX Location Map"
+                  src="/images/billboard-sprite.jpg"
+                  alt="KALAX Billboard"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-kalax-black/80 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
-                  <p className="text-kalax-white font-medium">Nationwide Coverage Across Tanzania</p>
+                  <p className="text-kalax-white font-medium">Premium Billboard Locations</p>
                 </div>
               </div>
             </motion.div>
@@ -293,6 +296,14 @@ export default function ContactPage() {
       <section className="py-12 bg-kalax-red">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16">
+            <motion.a
+              href="tel:+255769811511"
+              className="flex items-center gap-3 text-kalax-white hover:opacity-80 transition-opacity"
+              whileHover={{ scale: 1.05 }}
+            >
+              <Phone className="w-6 h-6" />
+              <span className="font-medium">+255 769 811 511</span>
+            </motion.a>
             <motion.a
               href="tel:+255713328271"
               className="flex items-center gap-3 text-kalax-white hover:opacity-80 transition-opacity"

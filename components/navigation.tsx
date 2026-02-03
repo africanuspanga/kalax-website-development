@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 
 const services = [
   { name: "Outdoor Advertising", href: "/services/outdoor-advertising", description: "Static billboards & digital screens" },
-  { name: "Marketing", href: "/services/marketing", description: "Activations, events & media buying" },
+  { name: "Marketing", href: "/services/marketing", description: "Activations, events & campaigns" },
   { name: "Creative", href: "/services/creative", description: "Design, animation & development" },
   { name: "Printing Services", href: "/services/printing", description: "Digital, offset & large format" },
 ]
@@ -46,6 +46,10 @@ export function Navigation() {
       >
         <div className="container mx-auto px-6 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
+            <a href="tel:+255769811511" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Phone className="w-4 h-4" />
+              +255 769 811 511
+            </a>
             <a href="tel:+255713328271" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <Phone className="w-4 h-4" />
               +255 713 328 271
@@ -247,6 +251,10 @@ export function Navigation() {
                   </Button>
 
                   <div className="mt-8 space-y-3 text-kalax-gray">
+                    <a href="tel:+255769811511" className="flex items-center gap-3 hover:text-kalax-red transition-colors">
+                      <Phone className="w-5 h-5" />
+                      +255 769 811 511
+                    </a>
                     <a href="tel:+255713328271" className="flex items-center gap-3 hover:text-kalax-red transition-colors">
                       <Phone className="w-5 h-5" />
                       +255 713 328 271

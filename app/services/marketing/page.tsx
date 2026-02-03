@@ -26,8 +26,8 @@ const services = [
     icon: ShoppingBag,
   },
   {
-    title: "Media Buying",
-    description: "Strategic ATL & BTL media planning and buying for maximum reach.",
+    title: "Campaign Strategy",
+    description: "Strategic campaign planning and execution for maximum brand impact and reach.",
     icon: Megaphone,
   },
 ]
@@ -82,7 +82,7 @@ export default function MarketingPage() {
               <span className="text-kalax-red">AUDIENCE</span>
             </h1>
             <p className="text-xl text-kalax-gray leading-relaxed mb-8">
-              From brand activations to media buying, we create integrated marketing campaigns 
+              From brand activations to campaign strategy, we create integrated marketing campaigns 
               that connect with your audience and drive measurable results.
             </p>
             <Button
