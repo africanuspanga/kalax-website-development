@@ -106,7 +106,7 @@ const projects = [
     title: "ABSA Bank - Salender Bridge Screen",
     category: "Digital Screens",
     client: "ABSA Bank",
-    video: "/videos/digital-screen-salender-bridge.mp4",
+    video: "/videos/New Salendar Bridge Screen.mp4",
     description: "Dynamic digital campaign on Salender Bridge screen reaching traffic from Town",
   },
   {

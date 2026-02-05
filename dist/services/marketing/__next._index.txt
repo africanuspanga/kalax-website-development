@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
 2:I[9665,["/_next/static/chunks/847a2fce04d8a6e0.js","/_next/static/chunks/7dac25c5d225d6dd.js"],"default"]
 3:I[64675,["/_next/static/chunks/847a2fce04d8a6e0.js","/_next/static/chunks/7dac25c5d225d6dd.js"],"default"]
-4:I[86550,["/_next/static/chunks/e4867814d1e668d3.js","/_next/static/chunks/7ed969405e217c78.js","/_next/static/chunks/85f4c0801796306b.js"],"default"]
+4:I[86550,["/_next/static/chunks/e4867814d1e668d3.js","/_next/static/chunks/7ed969405e217c78.js","/_next/static/chunks/e7cdc7a1cc0a0647.js"],"default"]
 5:I[77409,["/_next/static/chunks/e4867814d1e668d3.js"],"Analytics"]
-:HL["/_next/static/chunks/f423f5656655499b.css","style"]
-0:{"buildId":"OtycchAwhi1f2JLPPmwlP","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/f423f5656655499b.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/e4867814d1e668d3.js","async":true}]],["$","html",null,{"lang":"en","className":"inter_c15e96cb-module__0bjUvq__variable bebas_neue_7af210d2-module__mKzL6q__variable","children":["$","body",null,{"className":"font-sans antialiased bg-kalax-black text-kalax-white overflow-x-hidden","children":[["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","$L4",null,{}],[]]}],["$","$L5",null,{}]]}]}]]}],"loading":null,"isPartial":false}
+:HL["/_next/static/chunks/be8235c6ca3fb6db.css","style"]
+0:{"buildId":"fa1MD813rHv1lnp_zsS1p","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/be8235c6ca3fb6db.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/e4867814d1e668d3.js","async":true}]],["$","html",null,{"lang":"en","className":"inter_c15e96cb-module__0bjUvq__variable bebas_neue_7af210d2-module__mKzL6q__variable","children":["$","body",null,{"className":"font-sans antialiased bg-kalax-black text-kalax-white overflow-x-hidden","children":[["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","$L4",null,{}],[]]}],["$","$L5",null,{}]]}]}]]}],"loading":null,"isPartial":false}

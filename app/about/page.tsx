@@ -33,12 +33,13 @@ export default function AboutPage() {
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billboard-golden.jpg"
+            src="/images/billboard-emirates-tourism.jpg"
             alt="KALAX Network"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-60"
+            priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-kalax-black via-kalax-black/90 to-kalax-black" />
+          <div className="absolute inset-0 bg-gradient-to-b from-kalax-black/70 via-kalax-black/50 to-kalax-black" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">

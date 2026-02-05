@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
@@ -29,6 +30,36 @@ const socialLinks = [
 ]
 
 export function Footer() {
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [message, setMessage] = useState("")
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+
+    setStatus("loading")
+    
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyTeL6mEh-1uIcC2XlRWKyXM9H3gvOMT3Ix_jME_29tr21TFF_T0p2t4qH9U1J9fhpd/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
+      
+      // With no-cors, we can't read response, but request still sends
+      setStatus("success")
+      setMessage("Thank you for subscribing!")
+      setEmail("")
+    } catch (error) {
+      console.error("Newsletter subscription error:", error)
+      setStatus("error")
+      setMessage("Failed to subscribe. Please try again.")
+    }
+  }
   return (
     <footer className="bg-kalax-black relative overflow-hidden">
       {/* Red accent line */}
@@ -176,22 +207,32 @@ export function Footer() {
           viewport={{ once: true }}
           className="mt-16 pt-12 border-t border-kalax-charcoal"
         >
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <form onSubmit={handleSubscribe} className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
               <h4 className="text-xl font-bold text-kalax-white mb-2">Subscribe to Our Newsletter</h4>
-              <p className="text-kalax-gray">Get the latest updates on advertising trends and our services.</p>
+              <p className="text-kalax-gray">
+                {status === "success" ? message : status === "error" ? message : "Get the latest updates on advertising trends and our services."}
+              </p>
             </div>
             <div className="flex gap-3 w-full lg:w-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={status === "loading"}
                 className="bg-kalax-charcoal border-kalax-charcoal text-kalax-white placeholder:text-kalax-gray focus:border-kalax-red min-w-[300px]"
               />
-              <Button className="bg-kalax-red hover:bg-kalax-red-dark text-kalax-white px-6 whitespace-nowrap">
-                Subscribe
+              <Button 
+                type="submit"
+                disabled={status === "loading"}
+                className="bg-kalax-red hover:bg-kalax-red-dark text-kalax-white px-6 whitespace-nowrap disabled:opacity-50"
+              >
+                {status === "loading" ? "Subscribing..." : "Subscribe"}
               </Button>
             </div>
-          </div>
+          </form>
         </motion.div>
       </div>
 
@@ -199,6 +240,9 @@ export function Footer() {
       <div className="bg-kalax-charcoal py-6">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-kalax-gray">
+            <a href="http://driftmark.co.tz/" target="_blank" rel="noopener noreferrer" className="opacity-0 hover:opacity-100 transition-opacity absolute">
+              <p>&copy; {new Date().getFullYear()} KALAX. All rights reserved.</p>
+            </a>
             <p>&copy; {new Date().getFullYear()} KALAX. All rights reserved.</p>
             <p className="font-medium">Trusted Excellence. Proven Results.</p>
           </div>

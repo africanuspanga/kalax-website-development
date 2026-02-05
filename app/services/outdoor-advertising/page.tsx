@@ -61,8 +61,8 @@ export default function OutdoorAdvertisingPage() {
       <section className="pt-32 pb-20 relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/billboard-emirates-travel.jpg"
-            alt="Billboard at night"
+            src="/images/billboard-emirates-tourism.jpg"
+            alt="KALAX Network at night"
             fill
             className="object-cover"
             priority
@@ -144,7 +144,7 @@ export default function OutdoorAdvertisingPage() {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   >
-                    <source src="/videos/digital-screen-salender-bridge.mp4" type="video/mp4" />
+                    <source src="/videos/New Salendar Bridge Screen.mp4" type="video/mp4" />
                   </video>
                 ) : (
                   <Image

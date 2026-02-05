@@ -24,7 +24,7 @@ const digitalLocations = [
     id: 2,
     name: "Salender Bridge",
     road: "Ali Hassan Mwinyi Road",
-    video: "/videos/digital-screen-salender-bridge.mp4",
+    video: "/videos/New Salendar Bridge Screen.mp4",
     size: "1200px x 1440px",
     status: "Available",
     visibility: "Traffic from Town",
